@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%; }
+
+table th {
+  background-color: #383737;
+  color: #ffffff; }
+
+footer {
+  position: fixed;
+  height: 20px;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5; }
+
+.tile {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 2px grey; }
+  .tile h3 {
+    margin: 10px 5px; }
+  .tile span {
+    display: block;
+    padding: 1px 20px; }
+
+/*# sourceMappingURL=main.css.map */

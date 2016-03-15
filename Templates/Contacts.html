@@ -1,0 +1,49 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-12"><h2>{{title}}</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-3 col-xs-12">
+            <contact-search ng-model="searchText" place-holder="Search"></contact-search>
+        </div>
+    </div>
+
+    <div class="row visible-md visible-lg visible-sm">
+        <div class="col-md-12">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="contact in contacts | filter:searchText">
+                        <td>{{contact.name}}</td>
+                        <td>{{contact.country}}</td>
+                        <td>{{contact.phone}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row visible-xs">
+        <div class="col-xs-12">
+            <div class="thumbnail tile" ng-repeat="contact in contacts | filter:searchText">
+                <div>
+                    <h3 class="title">Name: {{contact.name}}</h3>
+                    <span>Country: {{contact.country}}</span>
+                    <span>Phone: {{contact.phone}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
